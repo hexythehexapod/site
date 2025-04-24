@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Archive</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-project.html">About the Project</a>
+    <a href="about-team.html">About the Team</a>
+    <a href="archive.html">Archive</a>
+    <a href="process.html">Process</a>
+    <a href="https://github.com/YOUR_USERNAME/YOUR_PROJECT_REPO" target="_blank">Code</a>
+  </nav>
+  <main>
+    <h1>Video Archive</h1>
+    <p>Just drag and drop videos into <code>assets/videos/</code> and they’ll show up below.</p>
+    <div id="video-gallery">
+      <p>Loading videos...</p>
+    </div>
+  </main>
+  <script>
+    // Static list for GitHub Pages (no backend support)
+    const videoFiles = [
+      "demo1.mp4",
+      "demo2.mp4"
+      // Add more filenames manually when you upload
+    ];
+
+    const gallery = document.getElementById("video-gallery");
+    gallery.innerHTML = "";
+
+    videoFiles.forEach(file => {
+      const video = document.createElement("video");
+      video.controls = true;
+      video.width = 600;
+
+      const source = document.createElement("source");
+      source.src = "assets/videos/" + file;
+      source.type = "video/mp4";
+
+      video.appendChild(source);
+      gallery.appendChild(video);
+    });
+  </script>
+</body>
+</html>
