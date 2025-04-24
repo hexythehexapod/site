@@ -17,7 +17,28 @@
   </nav>
   <main>
     <h1>Process</h1>
-    <p>Describe the workflow, milestones, and iterations.</p>
+    <p><strong>The development of Hexy involved balancing intelligent software with robust hardware. The steps followed included:</strong></p>
+
+    <ol>
+      <li><strong>Imagining the Robot</strong><br>
+      The process began with a question: how could a robot be built that adapts to the world rather than simply following commands? This led to the adoption of a six-legged design that is stable, flexible, and durable for rough terrain.</li>
+    
+      <li><strong>Building the Hardware</strong><br>
+      A custom power board was designed to operate 18 motors across Hexy’s six legs. The system was optimized for compactness and real-time responsiveness, with continuous monitoring of joint movement for coordinated walking.</li>
+    
+      <li><strong>Programming the Brain</strong><br>
+      A predictive controller was implemented to compute optimal steps in real time. This was paired with an inverse kinematics solver running on a Jetson Nano, allowing rapid decision-making.</li>
+    
+      <li><strong>Teaching it to See and Feel</strong><br>
+      A camera and IMU were integrated onboard to determine Hexy’s position and orientation. These were fused using sensor algorithms to ensure balance on uneven terrain.</li>
+    
+      <li><strong>Simulating and Fine-Tuning</strong><br>
+      Prior to physical deployment, Hexy’s movements were simulated using tools like Pinocchio for kinematics and CoppeliaSim for dynamics. These tools allowed for refined motion planning while maintaining computational efficiency.</li>
+    
+      <li><strong>Putting it to the Test</strong><br>
+      Following simulation, Hexy was tested in real-world environments. Lab floors and outdoor terrains were used to iteratively improve locomotion and control in live settings.</li>
+    </ol>
+
   </main>
 </body>
 </html>
