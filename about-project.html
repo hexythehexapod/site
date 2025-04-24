@@ -28,39 +28,87 @@
     <table border="1">
       <thead>
         <tr>
-          <th>Aspect</th>
-          <th>Hexapod</th>
+          <th>Category</th>
+          <th>Hexy (Hexapod)</th>
+          <th>Drone (Quadrotor)</th>
+          <th>Quadruped</th>
           <th>Biped</th>
-          <th>Wheeled</th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>Stability</td>
-          <td>High</td>
-          <td>Low</td>
-          <td>Moderate</td>
+          <td>High static stability with tripod gait</td>
+          <td>Low – must constantly adjust to stay airborne</td>
+          <td>Moderate – requires dynamic balance</td>
+          <td>Low – dynamically unstable, must balance continuously</td>
         </tr>
         <tr>
           <td>Terrain Navigation</td>
-          <td>Excellent</td>
-          <td>Poor</td>
-          <td>Limited</td>
+          <td>Excellent – handles uneven, soft, or cluttered terrain</td>
+          <td>Good in open spaces, poor in cluttered/indoor areas</td>
+          <td>Good – handles moderate terrain well</td>
+          <td>Fair – good for stairs and urban surfaces</td>
+        </tr>
+        <tr>
+          <td>Payload Interaction</td>
+          <td>Can make stable ground contact and support manipulation</td>
+          <td>None – cannot touch or manipulate directly</td>
+          <td>Limited – some can manipulate, but tradeoff with walking</td>
+          <td>Best – humanoid form fits manipulation tasks well</td>
+        </tr>
+        <tr>
+          <td>Energy Efficiency</td>
+          <td>Efficient – consumes very less energy</td>
+          <td>Poor – high energy use for hover</td>
+          <td>Moderate – lower than drones but more than Hexy</td>
+          <td>Poor – high control and power demands</td>
         </tr>
         <tr>
           <td>Redundancy</td>
-          <td>Yes</td>
-          <td>No</td>
-          <td>No</td>
+          <td>Yes – walks even with one or two leg failures</td>
+          <td>No – failure in rotor = crash</td>
+          <td>Low – difficult to recover from leg loss</td>
+          <td>None – one leg failure = fall</td>
         </tr>
         <tr>
-          <td>Speed</td>
-          <td>Moderate</td>
-          <td>Low</td>
-          <td>High</td>
+          <td>Maneuverability in Confined Spaces</td>
+          <td>Strong – can move in any direction without turning</td>
+          <td>Limited – requires clearance and flight space</td>
+          <td>Good – but limited in sideways motion</td>
+          <td>Limited – requires full body rotation to reorient</td>
+        </tr>
+        <tr>
+          <td>Ease of Control</td>
+          <td>Moderate – simplified by static balance</td>
+          <td>Hard – continuous feedback and control required</td>
+          <td>Hard – needs active balancing</td>
+          <td>Very hard – needs constant dynamic feedback</td>
+        </tr>
+        <tr>
+          <td>Failure Recovery</td>
+          <td>Very high – multiple gaits possible even with leg damage</td>
+          <td>None – failure is catastrophic</td>
+          <td>Poor – can't recover from single leg failure easily</td>
+          <td>None – highly sensitive to imbalance</td>
+        </tr>
+        <tr>
+          <td>Deployment Readiness</td>
+          <td>High – easier to tune and build</td>
+          <td>High – but needs regulation and skilled pilots</td>
+          <td>Moderate – needs gait tuning and robust build</td>
+          <td>Low – complex, costly to stabilize</td>
+        </tr>
+        <tr>
+          <td>Manipulation Potential</td>
+          <td>Future support with leg repurposing possible</td>
+          <td>Limited to suspended grippers</td>
+          <td>Possible but often reduces walking performance</td>
+          <td>Best for anthropomorphic interaction</td>
         </tr>
       </tbody>
     </table>
+
 
   </main>
 </body>
