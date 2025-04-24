@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Videos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-team.html">About the Team</a>
+    <a href="videos.html">Videos</a>
+    <a href="process.html">Process</a>
+    <a href="https://github.com/shantanu-ghodgaonkar/hexapod" target="_blank">Code</a>
+  </nav>
+  <main>
+    <h1>Hexy in Action</h1>
+    <p>Upload your .mp4 files into the <code>assets/videos/</code> folder and list them below to show them here.</p>
+    <div id="video-gallery">
+      <p>Loading videos...</p>
+    </div>
+  </main>
+
+  <script>
+    const videos = [
+      { file: "Hi.mp4", title: "Hello" },
+      { file: "demo1.mp4", title: "Hexy Test Walk 1" },
+      { file: "map1.mp4", title: "SLAM Map Creation" },
+      { file: "demo3.mp4", title: "Hexy Test Walk 3" },
+      { file: "demo2.mp4", title: "Hexy Test Walk 2" }
+    ];
+
+    const gallery = document.getElementById("video-gallery");
+    gallery.innerHTML = "";
+
+    videos.forEach(videoInfo => {
+      const container = document.createElement("div");
+      container.className = "video-block";
+
+      const title = document.createElement("h3");
+      title.textContent = videoInfo.title;
+
+      const video = document.createElement("video");
+      video.controls = true;
+
+      const source = document.createElement("source");
+      source.src = "assets/videos/" + videoInfo.file;
+      source.type = "video/mp4";
+
+      video.appendChild(source);
+      container.appendChild(video);
+      container.appendChild(title);
+      gallery.appendChild(container);
+    });
+  </script>
+</body>
+</html>
