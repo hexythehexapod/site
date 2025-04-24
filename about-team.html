@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About the Team</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      padding: 2rem;
+    }
+    .team-member {
+      max-width: 250px;
+      text-align: center;
+    }
+    .team-member img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -17,7 +36,33 @@
   </nav>
   <main>
     <h1>About the Team</h1>
-    <p>Introduce the team, roles, and contributions.</p>
+    <p>We are 4 engineers pursuing our master's degrees in Mechatronics, Robotics, and Automation at NYU.</p>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="assets/team/akanksha.jpg" alt="Akanksha Murali" />
+        <h3>Akanksha Murali</h3>
+        <p>Multidisciplinary engineer experienced in designing intelligent autonomous systems, integrating embedded hardware and AI software to build scalable robotic solutions. Passionate about solving real-world problems at the intersection of robotics, ML, and visual perception.</p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+      <div class="team-member">
+        <img src="assets/team/hemant.jpg" alt="Hemant Agrawal" />
+        <h3>Hemant Agrawal</h3>
+        <p>[Add bio here]</p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+      <div class="team-member">
+        <img src="assets/team/jithin.jpg" alt="Jithin George" />
+        <h3>Jithin George</h3>
+        <p>[Add bio here]</p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+      <div class="team-member">
+        <img src="assets/team/shantanu.jpg" alt="Shantanu Ghodgaonkar" />
+        <h3>Shantanu Ghodgaonkar</h3>
+        <p>[Add bio here]</p>
+        <p><a href="#">LinkedIn</a></p>
+      </div>
+    </div>
   </main>
 </body>
 </html>
