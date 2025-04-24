@@ -17,36 +17,44 @@
   </nav>
   <main>
     <h1>Video Archive</h1>
-    <p>Just drag and drop videos into <code>assets/videos/</code> and they’ll show up below.</p>
+    <p>Upload your .mp4 files into the <code>assets/videos/</code> folder and list them below to show them here.</p>
     <div id="video-gallery">
       <p>Loading videos...</p>
     </div>
   </main>
+
   <script>
-    // Static list for GitHub Pages (no backend support)
-    const videoFiles = [
-      "demo1.mp4",
-      "demo2.mp4"
-      "demo3.mp4"
-      "map1.mp4"
-      "Hi.mp4"
-      // Add more filenames manually when you upload
+    // ✅ Add video filename and a short title in this list
+    const videos = [
+      { file: "demo1.mp4", title: "Hexy Test Walk 1" },
+      { file: "demo2.mp4", title: "Hexy Test Walk 2" },
+      { file: "demo3.mp4", title: "Hexy Climbing/Turning" },
+      { file: "map1.mp4", title: "SLAM Map Creation" },
+      { file: "Hi.mp4", title: "Bonus: Debug Clip" }
     ];
 
     const gallery = document.getElementById("video-gallery");
     gallery.innerHTML = "";
 
-    videoFiles.forEach(file => {
+    videos.forEach(videoInfo => {
+      const container = document.createElement("div");
+      container.style.marginBottom = "40px";
+
+      const title = document.createElement("h3");
+      title.textContent = videoInfo.title;
+
       const video = document.createElement("video");
       video.controls = true;
       video.width = 600;
 
       const source = document.createElement("source");
-      source.src = "assets/videos/" + file;
+      source.src = "assets/videos/" + videoInfo.file;
       source.type = "video/mp4";
 
       video.appendChild(source);
-      gallery.appendChild(video);
+      container.appendChild(title);
+      container.appendChild(video);
+      gallery.appendChild(container);
     });
   </script>
 </body>
