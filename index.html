@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About the Project</title>
+  <title>Hexy | Autonomous Hexapod Robot</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,11 +13,107 @@
     <a href="about-team.html">About the Team</a>
     <a href="archive.html">Archive</a>
     <a href="process.html">Process</a>
-    <a href="https://github.com/YOUR_USERNAME/YOUR_PROJECT_REPO" target="_blank">Code</a>
+    <a href="https://github.com/shantanu-ghodgaonkar/hexapod" target="_blank">Code</a>
   </nav>
   <main>
-    <h1>About the Project</h1>
-    <p>Write about what the project is, its purpose, and its impact here.</p>
+    <h1>Hexy: The Hexapod</h1>
+    <h2 style="font-weight: normal; font-style: italic; margin-top: -0.5rem;">
+       "A modular hexapod-quadruped hybrid robot for stable, adaptive, autonomous movement and mapping"
+    </h2>
+
+    <img src="assets/hexy1.jpeg" alt="Hexy Robot" width="600" style="margin-top: 1rem;" />
+
+    <p><strong>Hexy</strong> is a six-legged robot that has been designed to confidently explore tricky terrain. While traditional wheeled robots may become stuck and bipedal ones may be unstable, Hexy’s hexapod structure provides the balance and control needed to move smoothly across everything from rocky ground to city rubble and even potential use on other planets.</p>
+
+    <p>Developed as part of a graduate research project at NYU, Hexy has been built for intelligent movement. <strong>Model Predictive Control (MPC)</strong> is used to plan steps in real time, while camera and IMU data are fused to estimate location and motion. With <strong>Visual SLAM</strong>, the surrounding environment is mapped during navigation, and <strong>autonomous obstacle avoidance</strong> enables the robot to adapt its path in response to unexpected barriers.</p>
+
+    <p>Whether industrial sites are being inspected or distant terrains are being explored, Hexy has been designed to go where other robots cannot.</p>
+
+    <p><em>Advantages of Hexapod over other designs are shown in the table below:</em></p>
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Category</th>
+          <th>Hexy (Hexapod)</th>
+          <th>Drone (Quadrotor)</th>
+          <th>Quadruped</th>
+          <th>Biped</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Stability</td>
+          <td>High static stability with tripod gait</td>
+          <td>Low – must constantly adjust to stay airborne</td>
+          <td>Moderate – requires dynamic balance</td>
+          <td>Low – dynamically unstable, must balance continuously</td>
+        </tr>
+        <tr>
+          <td>Terrain Navigation</td>
+          <td>Excellent – handles uneven, soft, or cluttered terrain</td>
+          <td>Good in open spaces, poor in cluttered/indoor areas</td>
+          <td>Good – handles moderate terrain well</td>
+          <td>Fair – good for stairs and urban surfaces</td>
+        </tr>
+        <tr>
+          <td>Payload Interaction</td>
+          <td>Can make stable ground contact and support manipulation</td>
+          <td>None – cannot touch or manipulate directly</td>
+          <td>Limited – some can manipulate, but tradeoff with walking</td>
+          <td>Best – humanoid form fits manipulation tasks well</td>
+        </tr>
+        <tr>
+          <td>Energy Efficiency</td>
+          <td>Efficient – consumes very less energy</td>
+          <td>Poor – high energy use for hover</td>
+          <td>Moderate – lower than drones but more than Hexy</td>
+          <td>Poor – high control and power demands</td>
+        </tr>
+        <tr>
+          <td>Redundancy</td>
+          <td>Yes – walks even with one or two leg failures</td>
+          <td>No – failure in rotor = crash</td>
+          <td>Low – difficult to recover from leg loss</td>
+          <td>None – one leg failure = fall</td>
+        </tr>
+        <tr>
+          <td>Maneuverability in Confined Spaces</td>
+          <td>Strong – can move in any direction without turning</td>
+          <td>Limited – requires clearance and flight space</td>
+          <td>Good – but limited in sideways motion</td>
+          <td>Limited – requires full body rotation to reorient</td>
+        </tr>
+        <tr>
+          <td>Ease of Control</td>
+          <td>Moderate – simplified by static balance</td>
+          <td>Hard – continuous feedback and control required</td>
+          <td>Hard – needs active balancing</td>
+          <td>Very hard – needs constant dynamic feedback</td>
+        </tr>
+        <tr>
+          <td>Failure Recovery</td>
+          <td>Very high – multiple gaits possible even with leg damage</td>
+          <td>None – failure is catastrophic</td>
+          <td>Poor – can't recover from single leg failure easily</td>
+          <td>None – highly sensitive to imbalance</td>
+        </tr>
+        <tr>
+          <td>Deployment Readiness</td>
+          <td>High – easier to tune and build</td>
+          <td>High – but needs regulation and skilled pilots</td>
+          <td>Moderate – needs gait tuning and robust build</td>
+          <td>Low – complex, costly to stabilize</td>
+        </tr>
+        <tr>
+          <td>Manipulation Potential</td>
+          <td>Future support with leg repurposing possible</td>
+          <td>Limited to suspended grippers</td>
+          <td>Possible but often reduces walking performance</td>
+          <td>Best for anthropomorphic interaction</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
 </body>
 </html>
