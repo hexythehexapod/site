@@ -5,6 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Archive</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    #video-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .video-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-block h3 {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    .video-block video {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -16,21 +38,19 @@
   </nav>
   <main>
     <h1>Video Archive</h1>
+    <p>Upload your .mp4 files into the <code>assets/videos/</code> folder and list them below to show them here.</p>
     <div id="video-gallery">
       <p>Loading videos...</p>
     </div>
   </main>
 
   <script>
-    // ✅ Add video filename and a short title in this list
     const videos = [
       { file: "Hi.mp4", title: "Hello" },
       { file: "demo1.mp4", title: "Hexy Test Walk 1" },
       { file: "map1.mp4", title: "SLAM Map Creation" },
       { file: "demo2.mp4", title: "Hexy Test Walk 2" },
       { file: "demo3.mp4", title: "Hexy Test Walk 3" }
-
-      
     ];
 
     const gallery = document.getElementById("video-gallery");
@@ -38,22 +58,21 @@
 
     videos.forEach(videoInfo => {
       const container = document.createElement("div");
-      container.style.marginBottom = "40px";
+      container.className = "video-block";
 
       const title = document.createElement("h3");
       title.textContent = videoInfo.title;
 
       const video = document.createElement("video");
       video.controls = true;
-      video.width = 600;
 
       const source = document.createElement("source");
       source.src = "assets/videos/" + videoInfo.file;
       source.type = "video/mp4";
 
       video.appendChild(source);
-      container.appendChild(title);
       container.appendChild(video);
+      container.appendChild(title);
       gallery.appendChild(container);
     });
   </script>
